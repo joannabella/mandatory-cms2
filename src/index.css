@@ -11,3 +11,639 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.nav {
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px -5px 15px 1px #00000047;
+  margin-bottom: -45px;
+}  
+
+.header {
+  background: url(https://techcrunch.com/wp-content/uploads/2018/06/MG_1469.png?w=1000);
+  height: 325px;
+  background-size: cover;
+  background-position-y: -115px;
+  background-repeat: no-repeat;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HOME */
+.home-link {
+  line-height: 45px;
+  display: flex;
+  margin-left: 70px;
+  color: black;
+  z-index: 100;
+}
+
+.shoppingcart-link {
+  position: relative;
+  top: 14px;
+  color: black;
+  z-index: 100;
+}
+
+.search-container {
+  position: relative;
+  top: -145px;
+  height: 60px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.searchfield {
+  width: 990px;
+  height: 35px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  padding-left: 10px;
+  font-size: 15px;
+  background-color: #eeeeeee0;
+  border: 1px solid #88888812;
+  box-shadow: 0px 3px 7px -4px #00000052;
+  outline-color: rgb(88, 88, 88);
+  outline-width: thin;
+}
+
+.search-instock {
+  position: absolute;
+  bottom: -2px;
+  right: 30px;
+  font-size: 14px;
+}
+
+.in-stock-checkbox {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.home-products-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.home-product {
+  background-color: white;
+  list-style-type: none;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 0px 15px 20px 15px;
+  box-shadow: 1px 1px 20px 1px #00000014;
+  transition: .2s ease;
+  margin-top: -185px
+}
+
+.home-product:hover {
+  transform: translateY(-0.8%);
+}
+
+.home-product-img {
+  height: 274px;
+  margin: 0 20px 0 20px;
+}
+
+.home-product-details {
+  width: 180px;
+  text-align: left;
+  margin: 0 auto;
+  color: black;
+}
+
+.home-product-brand {
+  display: inline-block;
+}
+
+.home-product-name {
+  max-width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.home-product-price {
+  float: right;
+  margin-top: 22px;
+  font-size: 14px;
+}
+
+.backward {
+  align-self: center;
+  position: absolute;
+  left: 0px;
+  background-color: transparent; 
+  color: #585858;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.forward {
+  align-self: center;
+  position: absolute;
+  right: 0px;
+  background-color: transparent; 
+  color: #585858;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* PRODUCT */
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 70px;
+  justify-content: center;
+}
+
+.product-details {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 30%;
+  text-align: left;
+  max-width: 420px;
+  margin-left: 25px;
+}
+
+.product-listimage {
+  display: flex;
+  margin-left: 50px;
+}
+
+.product-small-imgs {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img {
+  width: 95px;
+  margin-bottom: 5px;
+}
+
+.product-big-img {
+  width: 400px;
+  margin-right: 25px;
+}
+
+.product-brand {
+  margin-right: 43px;
+  padding-left: 11px;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 300;
+  padding-left: 11px;
+}
+
+.product-price {
+  position: absolute;
+  right: 25px;
+  top: 8px;
+  font-size: 15px
+}
+
+.product-instock {
+  margin-top: 50px;
+  padding-left: 11px;
+}
+
+.product-img-color {
+  width: 50px;
+}
+
+.small-img-text {
+  margin-left: 9px;
+  font-size: 11px;
+  font-weight: 500;
+  max-width: 50px;
+}
+
+.product-description{
+  max-width: 500px;
+  font-size: 14px;
+  padding-left: 11px;
+  padding-bottom: 40px;
+}
+
+.product-amount-select {
+  max-width: 387px;
+  height: 35px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+  font-size: 15px;
+  background-color: transparent;
+  border: 1px solid #88888861;
+  border-radius: 5px;
+  box-shadow: 0px 3px 7px -4px #00000000;
+}
+
+.add-to-basket {
+  max-width: 400px;
+  height: 37px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to right, #8e61fb, rgb(133, 0, 255));
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: .2s ease;
+  text-transform: uppercase;
+}
+
+/* REVIEWS */
+
+.reviews-container {
+  text-align: left;
+  background: url(https://techcrunch.com/wp-content/uploads/2018/06/MG_1469.png?w=1000);
+  background-size: cover;
+}
+
+.single-review {
+  border-bottom: 1px solid black;
+}
+
+.reviews-list {
+  width: 430px;
+  max-height: 420px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  margin-left: 55%;
+  margin-bottom: 0;
+  box-shadow: 1px 1px 20px 1px #80808040;
+  padding: 0px 10px 20px 10px;
+  background-color: #ffffffa6;
+}
+
+.review-title {
+
+}
+
+.review-rating {
+  font-size: 14px;
+}
+
+.review-body {
+  font-size: 14px;
+}
+
+/* PREVIEW-BOX */
+
+.shoppingcart-container {
+  position: relative;
+  height: 230px;
+  right: 145px;
+}
+
+.preview-container {
+  background-color: white;
+  list-style-type: none;
+  border-radius: 3px;
+  padding: 15px;
+  box-shadow: 1px 1px 25px 1px #00000024;
+  width: 245px;
+  text-align: left;
+  position: absolute;
+  right: -97px;
+  top: 45px;
+  z-index: 100;
+}
+
+.preview-empty-message {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.preview-container-title {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -5px;
+}
+
+.preview-list {
+  padding: 0;
+  margin-bottom: 0;
+  max-height: 315px;
+  overflow: scroll;
+}
+
+.preview-list::-webkit-scrollbar {
+  display: none;
+}
+
+.preview-item, .cart-item {
+  display: flex;
+  padding-bottom: 15px;
+}
+
+.preview-count, .cart-count {
+  display: inline-block;
+}
+
+.preview-img {
+  height: 55px;
+  padding: 0 5px 0px 5px;
+}
+
+.preview-info {
+
+}
+
+.preview-brand {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.preview-name {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 100;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 110px;
+}
+
+.preview-price {
+  font-size: 13px;
+  margin-left: 10px;
+  margin-top: 12px;
+  color: rgb(97, 0, 185);
+  white-space: nowrap;
+  text-align: right;
+  height: 15px;
+  width: 56px;
+}
+
+.amount {
+  padding-left: 4px;
+  font-size: 15px;
+}
+
+.increase, .decrease, .cart-item-increase, .cart-item-decrease {
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  outline: none;
+}
+
+.to-cart-container {
+  box-shadow: 0px -12px 15px -13px #00000017;
+}
+
+.preview-totalprice-container {
+  padding-top: 5px;
+}
+
+.preview-totalprice {
+  font-size: 14px;
+}
+
+.to-cart-button, .to-checkout-button {
+  width: 235px;
+  height: 37px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to right, #8e61fb, rgb(133, 0, 255));
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: .2s ease;
+  text-transform: uppercase;
+}
+
+/* SHOPPINGCART */
+
+.cart-background {
+  background: url(https://techcrunch.com/wp-content/uploads/2018/06/MG_1469.png?w=1000);
+  background-position-y: -55px;
+  background-color: #00000003;
+  background-size: cover;
+  padding-top: 1px;
+  height: 47vh;
+}
+
+.cart-container {
+  position: relative;
+  background-color: white;
+  max-width: 605px;
+  top: 86px;
+  margin: 0 auto;
+  padding: 15px 20px 20px 20px;
+  box-shadow: 1px 1px 20px 1px #a7a7a759;
+}
+
+.cart-container-empty {
+  height: 200px;
+  padding: 10px 10px 10px 10px;
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: initial;
+  background-color: #00000008;
+}
+
+.cart-avatar {
+  height: 230px;
+  width: 230px;
+  position: absolute;
+  bottom: 100px;
+  right: 40px;
+}
+
+.cart-list {
+  padding: 0;
+  max-height: 335px;
+  overflow: scroll;
+}
+
+.cart-item {
+  margin: 0 auto;
+  min-width: 412px;
+  max-width: 700px;
+  padding-left: 120px;
+}
+
+.cart-count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.cart-img {
+  height: 150px;
+  padding-right: 25px;
+}
+
+.cart-info {
+  padding-top: 25px;
+}
+
+.cart-brand {
+  text-align: left;
+  font-weight: 500;
+}
+
+.cart-name {
+  text-align: left;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.cart-price {
+  font-size: 14px;
+  margin-right: 200px;
+}
+
+.cart-totalprice {
+  margin-top: 0;
+  border-top: 1px solid black;
+  padding-top: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+/* CHECKOUT */
+
+.checkout-avatar {
+  height: 0px;
+  margin-top: 55px;
+}
+
+.checkout-container {
+  background: url(https://techcrunch.com/wp-content/uploads/2018/06/MG_1469.png?w=1000);
+  height: 39vh;
+  background-position-y: -90px;
+  background-size: cover;
+}
+
+.checkout-form, .confirm-container {
+  background-color: #ffffff;
+  max-width: 315px;
+  padding: 25px;
+  margin: 0 auto;
+  margin-top: 161px;
+  text-align: left;
+  z-index: 100;
+  box-shadow: 1px 1px 20px 1px #80808036;
+}
+
+.checkout-form-title {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.checkout-name-userfield, .checkout-email-userfield, .checkout-adress-userfield {
+  border: 1px solid #000;
+  border-radius: 4px 4px 0 0;
+  background-color: transparent;
+  padding-left: 16px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #000;
+  width: 298px;
+  height: 35px;
+  outline: none;
+}
+
+.checkout-star {
+  color: #ff4701;
+  font-size: 12px;
+  margin-left: 1px;
+}
+
+.checkout-button {
+  width: 317px;
+  height: 37px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to right, #8e61fb, rgb(133, 0, 255));
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: .2s ease;
+  text-transform: uppercase;
+}
+
+/* CONFIRM */
+
+.confirm-container {
+  height: 200px;
+  margin-top: 0;
+  box-shadow: none;
+}
+
+.confirm-title {
+  margin-top: -10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.confirm-regards {
+  font-style: italic;
+}
+
+@media (max-width: 1086px) {
+  .home-product {
+    margin-top: 0;  
+  }
+  .main-section {
+    margin-top: -60px;
+  }
+
+  .searchfield {
+    width: 500px;
+  }
+}
+
+@media (max-width: 580px) {
+  .searchfield {
+    width: 250px;
+  }
+}

@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import Home from './components/home';
+import Details from './components/details';
+import ShoppingCart from './components/shoppingCart';
+import CartPreview from './components/cartPreview';
+import Checkout from './components/checkout';
 import './App.css';
+import { Provider } from 'react-redux';
+import Store from './store';
+
 
 function App() {
+  const [showPreview, updateShowPreview] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={Store}>
+      <Router>
+        <div className='App'>
+          <nav className='nav'>
+            <Link to='/' className='home-link'>Hem</Link>
+            <div className='shoppingcart-container' onMouseEnter={() => updateShowPreview(true)} onMouseLeave={() => updateShowPreview(false)}>
+              <Link to='/shoppingcart' className='shoppingcart-link'><i className="fas fa-shopping-cart"></i> Varukorg</Link>
+              {showPreview ? <CartPreview /> : ''}
+            </div>
+          </nav>
+          <Route exact path='/' component={Home} />
+          <Route path='/details/:id' component={Details} />
+          <Route path='/shoppingcart' component={ShoppingCart} />
+          <Route path='/checkout' component={Checkout} />
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
